@@ -62,13 +62,23 @@ func TODO() Context() {
 ### Context 继承
 Context 通过下面四个方法实现创建子 Context，[源码实现](https://tip.golang.org/src/context/context.go)。
 ```go
-func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
 
-func WithDeadline(parent Context, deadline time.Time) (Context, CancelFunc)
+func WithCancel(parent Context) (ctx Context, cancel CancelFunc) {
+    ...
+}
 
-func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
+func WithDeadline(parent Context, deadline time.Time) (Context, CancelFunc) {
+    ...
+}
 
-func WithValue(parent Context, key, val interface{}) Context
+func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) {
+    ...
+}
+
+func WithValue(parent Context, key, val interface{}) Context {
+    ...
+}
+
 ```
 
 ### 使用技巧
