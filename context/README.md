@@ -21,7 +21,7 @@ type Context interface {
 ```
 
 ###  基本实现类型
-context 包定义 emptyCtx 类型，并实现了 Context 接口的方法
+context 包定义 emptyCtx 类型，并实现了 Context 接口的方法。
 
 ```go
 type emptyCtx int
@@ -60,7 +60,7 @@ func TODO() Context() {
 ```
 
 ### Context 继承
-Context 通过下面四个方法实现创建子 Context，[源码实现](https://tip.golang.org/src/context/context.go)
+Context 通过下面四个方法实现创建子 Context，[源码实现](https://tip.golang.org/src/context/context.go)。
 ```go
 func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
 
